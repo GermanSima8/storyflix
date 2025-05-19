@@ -23,7 +23,7 @@ const libros = {
     {
       id: 3,
       titulo: "Carlos y la tortuga que sabía leer",
-      portada: "img/tortuga.png",
+      portada: "img/tortuga.jpeg",
       driveLink:
         "https://drive.google.com/file/d/1G3irBHi5wVDu2MZ39etPLxSOD4sVJ-39/view?usp=sharing  ",
       formLink: "https://docs.google.com/forms/d/ID_FORMULARIO_1",
