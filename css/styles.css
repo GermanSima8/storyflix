@@ -1,0 +1,591 @@
+/* ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #141414;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    padding-top: 70px;
+}
+
+/* BARRA DE NAVEGACIÓN */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 10px 20px;
+    height: 60px;
+    transition: all 0.3s ease;
+}
+
+.left-nav {
+    display: flex;
+    align-items: center;
+}
+
+.desktop-nav ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.desktop-nav li {
+    margin-right: 20px;
+}
+
+.desktop-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.navbar img {
+    margin-right: 20px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.user img {
+    width: 30px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* CARRUSEL DE LIBROS */
+.carousel {
+    margin-bottom: 40px;
+    padding: 0 40px;
+    position: relative;
+}
+
+.carousel-container {
+    position: relative;
+}
+
+.carousel h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.book-list {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    justify-content: flex-start;
+}
+
+.book-list::-webkit-scrollbar {
+    display: none;
+}
+
+/* CONTROLES DEL CARRUSEL */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 10;
+}
+
+.carousel-btn {
+    pointer-events: all;
+    background: rgba(20, 20, 20, 0.7);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 60px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.carousel:hover .carousel-btn {
+    opacity: 1;
+}
+
+.carousel-btn:hover {
+    background: rgba(229, 9, 20, 0.7);
+}
+
+.carousel-btn.prev {
+    border-radius: 0 4px 4px 0;
+}
+
+.carousel-btn.next {
+    border-radius: 4px 0 0 4px;
+}
+
+/* TARJETAS DE LIBROS */
+.book {
+    min-width: 200px;
+    height: 300px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.book:hover {
+    transform: scale(1.05);
+    z-index: 5;
+}
+
+.book img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* MODAL DE DETALLES */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    background-color: #181818;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.cerrar-modal:hover {
+    color: #e50914;
+}
+
+.modal-body {
+    display: flex;
+    gap: 20px;
+}
+
+#modal-portada {
+    width: 40%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.modal-info {
+    width: 60%;
+    color: #fff;
+}
+
+/* BOTONES MODAL */
+.boton-leer, 
+.boton-formulario {
+    display: inline-block;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    flex: 1;
+    min-width: 160px;
+}
+
+.boton-leer {
+    background-color: #e50914;
+    margin: 0;
+}
+
+.boton-leer:hover {
+    background-color: #f40612;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(229, 9, 20, 0.3);
+}
+
+.boton-formulario {
+    background-color: #1a73e8;
+    margin: 0;
+}
+
+.boton-formulario:hover {
+    background-color: #1765cc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(26, 115, 232, 0.3);
+}
+
+.modal-botones {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+/* EFECTO OVERLAY PARA TÍTULOS EN PORTADAS */
+.book-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 20px 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 0 0 4px 4px;
+}
+
+.book-overlay h3 {
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+}
+
+.book:hover .book-overlay {
+    opacity: 1;
+}
+
+/* ===== NAVBAR RESPONSIVE ===== */
+/* Menú mobile (ocultar en desktop) */
+.mobile-menu {
+    display: none;
+}
+
+/* Estilos del menú hamburguesa */
+.menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 20px;
+    color: white;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #141414;
+    z-index: 1000;
+    padding: 30px;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.mobile-nav.active {
+    right: 0;
+}
+
+.close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #e50914;
+    cursor: pointer;
+}
+
+.mobile-nav ul {
+    margin-top: 40px;
+    list-style: none;
+}
+
+.mobile-nav li {
+    margin-bottom: 20px;
+}
+
+.mobile-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mobile-nav a i {
+    width: 25px;
+    color: #e50914;
+}
+
+.mobile-search {
+    margin-top: 30px;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: none;
+    background-color: #333;
+    color: white;
+}
+
+.search-container i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #e50914;
+}
+
+/* BUSCADOR */
+.desktop-search-container {
+    position: relative;
+    display: none;
+    margin-left: 20px;
+}
+
+.desktop-search-container.active {
+    display: block;
+}
+
+.desktop-search-input {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    width: 200px;
+    outline: none;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: width 0.3s ease;
+}
+
+.desktop-search-input:focus {
+    width: 250px;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: none;
+    margin-top: 5px;
+}
+
+.resultado-item {
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.resultado-item:hover {
+    background-color: #f5f5f5;
+}
+
+.resultado-item img {
+    width: 50px;
+    height: 70px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.resultado-item h3 {
+    font-size: 14px;
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.resultado-item p {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+}
+
+.no-resultados {
+    padding: 15px;
+    text-align: center;
+    color: #666;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 768px) {
+    /* NAVBAR */
+    .navbar {
+        padding: 10px 15px;
+    }
+    
+    .desktop-nav {
+        display: none;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
+    
+    .user {
+        gap: 10px;
+        margin-left: auto;
+        padding-left: 10px;
+    }
+    
+    .user .fa-search,
+    .user .fa-bell {
+        font-size: 1.2rem;
+    }
+    
+    .user img {
+        width: 25px;
+    }
+    
+    .menu-icon {
+        margin-left: 0;
+        font-size: 1.3rem;
+    }
+    
+    .navbar img {
+        height: 35px;
+        margin-right: 10px;
+    }
+    
+    /* CARRUSEL */
+    .carousel {
+        padding: 0 20px;
+    }
+    
+    .carousel-btn {
+        width: 30px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    /* MODAL */
+    .modal-body {
+        flex-direction: column;
+    }
+    
+    #modal-portada {
+        width: 100%;
+    }
+    
+    .modal-info {
+        width: 100%;
+    }
+    
+    /* BOTONES */
+    .boton-leer, 
+    .boton-formulario {
+        padding: 10px 15px;
+        min-width: 140px;
+        font-size: 0.9rem;
+    }
+    
+    .modal-botones {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* NAVBAR */
+    .user {
+        gap: 8px;
+    }
+    
+    .user .fa-search,
+    .user .fa-bell {
+        font-size: 1.1rem;
+    }
+    
+    .user img {
+        width: 30px;       /* Ancho fijo */
+        height: 30px;      /* Altura igual al ancho */
+        object-fit: cover; /* Asegura que la imagen mantenga proporciones */
+       
+    }
+    
+    .menu-icon {
+        font-size: 1.2rem;
+    }
+    
+    .navbar {
+        padding: 8px 10px;
+        height: 50px;
+    }
+    
+    .navbar img {
+        height: 30px;
+    }
+    
+    /* LIBROS */
+    .book {
+        min-width: 150px;
+        height: 225px;
+    }
+    
+    /* MODAL */
+    .modal-contenido {
+        width: 95%;
+        padding: 15px;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-menu {
+        display: none;
+    }
+}

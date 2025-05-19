@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storyflix</title>
+    <link rel="icon" href="./img/s.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="left-nav">
+            <img src="./img/logo.webp" alt="STORYFLIX Logo" style="height: 40px;">
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Categorías</a></li>
+                    <li><a href="">Mi lista</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="user">
+            <i class="fas fa-search search-icon"></i>
+            <i class="fas fa-bell"></i>
+            <img src="img/usuarioazul.webp" alt="Usuario">
+        </div>
+        <!-- Menú hamburguesa para móvil -->
+        <div class="mobile-menu">
+            <i class="fas fa-bars menu-icon"></i>
+            <div class="mobile-nav">
+                <i class="fas fa-times close-icon"></i>
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#"><i class="fas fa-list"></i> Categorías</a></li>
+                    <li><a href="#"><i class="fas fa-bookmark"></i> Mi lista</a></li>
+                    <li class="mobile-search">
+                        <div class="search-container">
+                            <input type="text" placeholder="Buscar...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- Contenido principal -->
+    <main>
+        <section class="carousel">
+            <h2 style="font-size: 20px;">Recomendados para ti</h2>
+            <div class="carousel-container">
+                <div class="book-list" id="recomendados"></div>
+            </div>
+        </section>
+
+        <section class="carousel">
+            <h2 style="font-size: 20px;">Los más leídos</h2>
+            <div class="carousel-container">
+                <div class="book-list" id="mas-leidos"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Detalles - VERSIÓN MODIFICADA -->
+    <div id="modal-detalles" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <div class="modal-body">
+                <img id="modal-portada" src="" alt="Portada del libro">
+                <div class="modal-info">
+                    <h2 id="modal-titulo"></h2>
+                    <p id="modal-descripcion"></p>
+                    <div class="modal-botones">
+                        <a id="modal-link" href="#" target="_blank" class="boton-leer">Leer ahora</a>
+                        <a id="modal-form-link" href="#" target="_blank" class="boton-formulario">Formulario del
+                            cuento</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/libros.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/buscador.js"></script>
+</body>
+
+</html>
