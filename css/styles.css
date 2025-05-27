@@ -589,3 +589,71 @@ body {
         display: none;
     }
 }
+
+
+
+/* Fix para Safari - Evita zoom no deseado en inputs */
+@media (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Fix para flexbox en Safari */
+.book-list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
+}
+
+/* Fix para height en Safari */
+.modal {
+  height: -webkit-fill-available;
+  height: 100vh;
+}
+
+
+/* Fix para overflow scrolling en iOS */
+.carousel-container {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Fix para botones hover en dispositivos táctiles */
+@media (hover: none) {
+  .book:hover {
+    transform: none;
+  }
+  
+  .boton-leer:hover, 
+  .boton-formulario:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+
+/* Estilos específicos para iOS */
+.is-ios .navbar {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.is-ios body {
+  padding-top: calc(70px + env(safe-area-inset-top));
+}
+
+.is-ios .modal-contenido {
+  margin-top: env(safe-area-inset-top);
+  margin-bottom: env(safe-area-inset-bottom);
+}
+
+/* Fix para el efecto de desplazamiento elástico en iOS */
+.is-ios .book-list {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Fix para el zoom en inputs en iOS */
+.is-ios input {
+  font-size: 16px !important;
+}
