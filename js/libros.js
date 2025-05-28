@@ -127,8 +127,7 @@ const libros = {
       portada: "img/luna.jpg",
       driveLink:
         "https://drive.google.com/file/d/12vizpYSS4ylS69gGSVVC8eg1BkLND1_9/view?usp=drivesdk",
-      formLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLSdNcdLMLdYcD4XnOF9jpiOHHir5V-l3kFF3ES9qkixFBZUuKA/viewform?usp=header",
+      formLink: "https://docs.google.com/forms/d/ID_FORMULARIO_1",
       descripcion:
         "A qué sabe la luna es un cuento infantil que trata sobre la curiosidad de un grupo de animales por saber a qué sabe la luna.",
     },
