@@ -50,7 +50,8 @@ const libros = {
       portada: "img/dalmatas.jpeg",
       driveLink:
         "https://drive.google.com/file/d/1oQDPZwLWSlM_CY8t7VYyn_UDW6fQefL6/view?usp=sharing ",
-      formLink: "https://docs.google.com/forms/d/ID_FORMULARIO_1",
+      formLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSfCIR_jFZIdrI8wK6PuDVKWyBYUim0Mn--nEa_myUQesPn7gQ/viewform?usp=sharing&ouid=115465881991314726330",
       descripcion:
         "101 dálmatas es una divertida aventura de Disney en la que dos perros dálmatas, Pongo y Perdita, deben rescatar a sus cachorros secuestrados por la malvada Cruella de Vil",
     },
@@ -82,7 +83,8 @@ const libros = {
       portada: "img/charco.jpg",
       driveLink:
         "https://drive.google.com/file/d/1o9sYma94xCGh3qhlgz1-YL_aCUoiogY_/view",
-      formLink: "https://docs.google.com/forms/d/ID_FORMULARIO_1",
+      formLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSdVhd5_GaGoCxKxQ9AiPgMYOYAJ7uupCm8xehAUxlonUBBVBQ/viewform?usp=sharing&ouid=115465881991314726330",
       descripcion:
         "Cuenta la historia de un charco que se forma en el suelo después de una tormenta, y cómo diferentes personajes, incluyendo animales y personas, interactúan con él.",
     },
@@ -138,7 +140,8 @@ const libros = {
       portada: "img/esasi.jpg",
       driveLink:
         "https://drive.google.com/file/d/1ChEtn1kVUyciU4SJb5nESTZdK8J8f0y4/view",
-      formLink: "https://docs.google.com/forms/d/ID_FORMULARIO_1",
+      formLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSfmrHBZKylQW8R_wSOWA5Tmx3FBjc8p8AQgDmbfpZ8UtZiRAA/viewform?usp=header",
       descripcion:
         "Narra la historia de un niño que se cuestiona la realidad y busca demostrar que las cosas no son como se le han dicho.",
     },
@@ -148,7 +151,8 @@ const libros = {
       portada: "img/ceniciento.jpg",
       driveLink:
         "https://drive.google.com/file/d/1NKH2su0-YK-6GkG1NrbHjUtFUgLLpeam/view",
-      formLink: "https://docs.google.com/forms/d/ID_FORMULARIO_1",
+      formLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSd0B6wq1I7bW6fwOR4Zwsn1rMotArvo3TQKclx9AoM8r4gyAw/viewform?usp=header",
       descripcion:
         "El príncipe es un chico delgado que debe hacer las tareas del hogar mientras sus hermanos grandes se divierten. Un hada le concede un deseo.",
     },
@@ -158,7 +162,8 @@ const libros = {
       portada: "img/lobo.jpg",
       driveLink:
         "https://drive.google.com/file/d/1S8ElUUQpGgWxr1JpEOnBnpJno8MVy8zq/view",
-      formLink: "https://docs.google.com/forms/d/ID_FORMULARIO_1",
+      formLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLScgiIMyzveaZEcxaoRwk99_rFF15pylklWbx8xGJrUS-0Dlvw/viewform?usp=sharing&ouid=115465881991314726330",
       descripcion:
         "Narra la historia de un lobo que, insatisfecho con su color original negro, decide cambiar de color.",
     },
